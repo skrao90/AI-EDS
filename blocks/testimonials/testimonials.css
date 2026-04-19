@@ -1,0 +1,98 @@
+/* ============================================
+   TESTIMONIALS BLOCK
+   ============================================ */
+
+.testimonials.block .testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.testimonials .testimonial-card {
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 32px;
+  position: relative;
+  transition: border-color var(--transition);
+}
+
+.testimonials .testimonial-card:hover {
+  border-color: rgba(0, 200, 255, 0.3);
+}
+
+.testimonials .testimonial-card::before {
+  content: '"';
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  font-family: var(--font-family-heading);
+  font-size: 80px;
+  color: var(--color-accent);
+  opacity: 0.15;
+  line-height: 1;
+}
+
+.testimonials .testimonial-stars {
+  color: #ffc107;
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 16px;
+}
+
+.testimonials .testimonial-text {
+  font-size: 15px;
+  color: var(--color-text);
+  line-height: 1.8;
+  margin-bottom: 24px;
+  font-style: italic;
+}
+
+.testimonials .testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.testimonials .testimonial-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--color-surface-2);
+  border: 2px solid var(--color-accent);
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-heading);
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--color-accent);
+}
+
+.testimonials .testimonial-avatar img,
+.testimonials .testimonial-avatar picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.testimonials .testimonial-name {
+  font-family: var(--font-family-heading);
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 2px;
+}
+
+.testimonials .testimonial-role {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+@media (max-width: 700px) {
+  .testimonials.block .testimonials-grid { grid-template-columns: 1fr; }
+}
